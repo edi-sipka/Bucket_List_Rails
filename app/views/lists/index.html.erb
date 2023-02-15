@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Lists</h1>
+<h1>Bucket list</h1>
+
 
 <div id="lists">
   <% @lists.each do |list| %>
@@ -11,4 +12,5 @@
   <% end %>
 </div>
 
-<%= link_to "New list", new_list_path %>
+<%= link_to "New wish", new_list_path,class: "btn btn-primary" %>
+
