@@ -1,13 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Bucket list</h1>
 
-
-<div id="lists">
+<%= render "front_form" %>
+<div id="lists"class="notification">
   <% @lists.each do |list| %>
     <%= render list %>
     <p>
-      <%= link_to "Show this list", list %>
+        <%= button_to "Destroy this list", list, method: :delete %>
     </p>
   <% end %>
 </div>

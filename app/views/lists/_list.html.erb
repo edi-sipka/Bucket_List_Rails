@@ -1,14 +1,15 @@
 <div id="<%= dom_id list %>">
 
+
   <p>
   <% if list.completed %>
-    <strong class="text-danger">Description:</strong>
-    <span class="text-danger strike">
-    <%= list.description %>
+    <strong>Description:</strong>
+    <span class="strike">
+    <%= link_to list.description, list %>
     </span>
     <% else %>
     <strong>Description:</strong>
-    <%= list.description %>
+    <%= link_to list.description, list  %>
     <%end%>
   </p>
 

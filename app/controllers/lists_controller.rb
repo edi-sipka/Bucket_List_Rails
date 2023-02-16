@@ -4,6 +4,7 @@ class ListsController < ApplicationController
   # GET /lists or /lists.json
   def index
     @lists = List.all
+    @list = List.new
   end
 
   # GET /lists/1 or /lists/1.json
@@ -25,7 +26,7 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to list_url(@list), notice: "List was successfully created." }
+        format.html { redirect_to root_path, notice: "List was successfully created." }
         format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to list_url(@list), notice: "List was successfully updated." }
+        format.html { redirect_to root_path, notice: "List was successfully updated." }
         format.json { render :show, status: :ok, location: @list }
       else
         format.html { render :edit, status: :unprocessable_entity }
