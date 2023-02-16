@@ -42,6 +42,9 @@
     <p>
         <%= button_to "Destroy this list", list, method: :delete %>
     </p>
+    <p>
+    <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path %>
+    </p>
   <% end %>
-            
+    
 </section>
