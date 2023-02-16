@@ -36,15 +36,17 @@
 <% end %>
 
             <!-- Tabs content -->
-            <% @lists.each do |list| %>
+  <% @lists.each do |list| %>
     <%= render list %>
+    <%= form_for(list) do |f| %>
+    <%= f.text_field :description, type: "hidden"  %>
+    <%= f.check_box :completed, :checked =>true, :style => "visibility: hidden" %>
+    <%= f.submit "Done" %>
+<% end  %>
     
     <p>
         <%= button_to "Destroy this list", list, method: :delete %>
     </p>
-    <p>
-    <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path %>
-    </p>
   <% end %>
-    
+   <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path %>
 </section>
