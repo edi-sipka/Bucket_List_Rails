@@ -1,14 +1,9 @@
-<h1>Bucket list</h1>
 
-<%= render "front_form" %>
+
 <div id="lists"class="notification">
-  <% @lists.each do |list| %>
-    <%= render list %>
-    <p>
-        <%= button_to "Destroy this list", list, method: :delete %>
-    </p>
-  <% end %>
+  <%= render "index_style" %>
 </div>
 
-<%= link_to "New wish", new_list_path,class: "btn btn-primary" %>
+
+
 

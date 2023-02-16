@@ -1,0 +1,47 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+
+        <div class="card">
+          <div class="card-body p-5">
+
+          
+
+        
+            <!-- Tabs navs -->
+
+<%= form_with(model: @list) do |form| %>
+  <% if @list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+        <% @list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+  <label class="form-label" for="form2">Your bucket list for 2023</label>
+    <%= form.text_field :description, class: "form-control"  %>
+  </div>
+  <br>
+  <div>
+    <%= form.submit "Add new bucket wish", class: "btn btn-primary"  %>
+    
+  </div>
+<% end %>
+
+            <!-- Tabs content -->
+            <% @lists.each do |list| %>
+    <%= render list %>
+    
+    <p>
+        <%= button_to "Destroy this list", list, method: :delete %>
+    </p>
+  <% end %>
+            
+</section>
