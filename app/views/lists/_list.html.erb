@@ -5,22 +5,22 @@
                 <ul class="list-group mb-0">
                   <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded"
                     style="background-color: #f4f6f7;">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
+                  
                  
   <p>
   <% if list.completed %>
     
     <span class="strike">
-    <%= link_to list.description, list %>
+    <%=  list.description %>
+     <%= button_to "X", list, method: :delete, class: "btn btn-danger" %>
+     
     </span>
     <% else %>
 
-    <%= link_to list.description, list  %>
+    <%=  list.description  %>
+     <%= button_to "X", list, method: :delete, class: "btn btn-danger" %>
     <%end%>
   </p>
-
-                  </li>
-
-
+  </li>
 </div>
 

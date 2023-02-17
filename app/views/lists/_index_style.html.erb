@@ -8,11 +8,8 @@
      </div>
 
         <div class="card">
-          <div class="card-body p-5">
-
-          
-
-        
+          <div class="card-body p-5 background border-radius" >
+   
             <!-- Tabs navs -->
 
 <%= form_with(model: @list) do |form| %>
@@ -29,12 +26,13 @@
   <% end %>
 
   <div>
-  <label class="form-label" for="form2">Your bucket list for 2023</label>
-    <%= form.text_field :description, class: "form-control"  %>
+  <label class="form-label text-header" for="form2">Welcome to your 2023 bucket list!</label>
+    <%= form.text_field :description, class: "form-control", placeholder: "Write your wish"  %>
   </div>
   <br>
   <div>
-    <%= form.submit "Add new bucket wish", class: "btn btn-primary"  %>
+
+    <%= form.submit "Add wish", class: "btn btn-warning button-align" %>
     
   </div>
 <% end %>
@@ -45,12 +43,13 @@
     <%= form_for(list) do |f| %>
     <%= f.text_field :description, type: "hidden"  %>
     <%= f.check_box :completed, :checked =>true, :style => "visibility: hidden" %>
-    <%= f.submit "Done" %>
+    <%= f.submit "Achieved!" , class: "btn btn-success" %>
+    <%= button_to "X", list, method: :delete, class: "btn btn-danger" %>
+        
 <% end  %>
     
-    <p>
-        <%= button_to "Destroy this list", list, method: :delete %>
-    </p>
   <% end %>
-   <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path %>
+  <div class="marg">
+   <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path, class:"text-red" %>
+   </div>
 </section>
