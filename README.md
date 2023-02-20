@@ -5,7 +5,7 @@
 
 <!-- Review-->
 ## :card_index: Live Version <a name="er-diagram"></a>
-![Photo of app ](./app/assets/preview1.png)
+![Photo of app ](./preview1.png)
 
 ### Tech Stack <a name="tech-stack"></a>
 
