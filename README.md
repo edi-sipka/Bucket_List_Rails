@@ -3,7 +3,9 @@
 > This is a basic Bucket list in Rails. You can add your wish, delete specific wish, delete all marked wishes. I used Bootstrap for styling. 
 ** I did this project for purpose of Medium blog. I am plan to write 10 simple steps how to do your first basic CRUD app in Rails. ** 
 
-## 🛠 Built With <a name="built-with"></a>
+<!-- Review-->
+## :card_index: Live Version <a name="er-diagram"></a>
+![Photo of app ](./app/assets/preview1.png)
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -22,9 +24,6 @@
 </details>
 
 
-<!-- Review-->
-## :card_index: Live Version <a name="er-diagram"></a>
-![Live version](https://prnt.sc/fzW-aUuWbMxs)
 
 ### Key Features <a name="key-features"></a>
 
