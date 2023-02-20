@@ -1,6 +1,6 @@
-<section class="vh-100 gradient-custom">
+<section class="gradient-custom">
  
-  <div class="container py-5 h-100">
+  <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
        <div class="d-flex justify-content-center align-items-center">
@@ -30,25 +30,25 @@
     <%= form.text_field :description, class: "form-control", placeholder: "Write your wish"  %>
   </div>
   <br>
-  <div>
+  <div class="align-btn">
 
-    <%= form.submit "Add wish", class: "btn btn-warning button-align" %>
+    <%= form.submit "Add wish", class: "btn btn-warning button-align align-btn" %>
     
   </div>
 <% end %>
-
-            <!-- Tabs content -->
-  <% @lists.each do |list| %>
+<% @lists.each do |list| %>
     <%= render list %>
     <%= form_for(list) do |f| %>
     <%= f.text_field :description, type: "hidden"  %>
     <%= f.check_box :completed, :checked =>true, :style => "visibility: hidden" %>
     <%= f.submit "Achieved!" , class: "btn btn-success" %>
-    <%= button_to "X", list, method: :delete, class: "btn btn-danger" %>
+
         
 <% end  %>
     
   <% end %>
+            <!-- Tabs content -->
+  
   <div class="marg">
    <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path, class:"text-red" %>
    </div>
