@@ -1,0 +1,26 @@
+<div id="<%= dom_id list %>">
+ <div class="tab-content" id="ex1-content">
+              <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel"
+                aria-labelledby="ex1-tab-1">
+                <ul class="list-group mb-0">
+                  <li class="list-group-item d-flex align-items-center border-0 mb-2 rounded top"
+                    style="background-color: #f4f6f7;">
+                  
+                 
+  <p>
+  <% if list.completed %>
+    
+    <span class="strike">
+    <%=  list.description %>
+     <%= button_to "X", list, method: :delete, class: "btn btn-danger align-x" %>
+     
+    </span>
+    <% else %>
+
+    <%=  list.description  %>
+     <%= button_to "X", list, method: :delete, class: "btn btn-danger align-x" %>
+    <%end%>
+  </p>
+  </li>
+</div>
+

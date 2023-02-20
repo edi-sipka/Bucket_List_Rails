@@ -1,0 +1,55 @@
+<section class="gradient-custom">
+ 
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+       <div class="d-flex justify-content-center align-items-center">
+        <%= image_tag("text.png", width: 400, height: 400) %>
+     </div>
+
+        <div class="card">
+          <div class="card-body p-5 background border-radius" >
+   
+            <!-- Tabs navs -->
+
+<%= form_with(model: @list) do |form| %>
+  <% if @list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+        <% @list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+  <label class="form-label text-header" for="form2">Welcome to your 2023 bucket list!</label>
+    <%= form.text_field :description, class: "form-control", placeholder: "Write your wish"  %>
+  </div>
+  <br>
+  <div class="align-btn">
+
+    <%= form.submit "Add wish", class: "btn btn-warning button-align align-btn" %>
+    
+  </div>
+<% end %>
+<% @lists.each do |list| %>
+    <%= render list %>
+    <%= form_for(list) do |f| %>
+    <%= f.text_field :description, type: "hidden"  %>
+    <%= f.check_box :completed, :checked =>true, :style => "visibility: hidden" %>
+    <%= f.submit "Achieved!" , class: "btn btn-success" %>
+
+        
+<% end  %>
+    
+  <% end %>
+            <!-- Tabs content -->
+  
+  <div class="marg">
+   <%= link_to "Delete marked items",  deleted_lists_deleted_marked_path, class:"text-red" %>
+   </div>
+</section>

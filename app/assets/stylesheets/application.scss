@@ -1,0 +1,85 @@
+
+ @import "bootstrap";
+ 
+ .strike{
+    text-decoration: line-through;
+ }
+ .gradient-custom {
+   background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+     linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+     linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+     radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+     radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+   background-blend-mode: screen, color-dodge, overlay, difference, normal;
+   width: 100%;
+ }
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background{
+  background: radial-gradient(50% 123.47% at 50% 50%, #5dc9ff 0%, #0010e9 100%),
+     linear-gradient(121.28deg, #5db9ff  0%, #0004ff 100%),
+     linear-gradient(360deg, #0029ff 0%, #025899 100%),
+     radial-gradient(100% 164.72% at 100% 100%, #5da9ff  0%, #00ff57 100%),
+     radial-gradient(100% 148.07% at 0% 0%, #009dff 0%, #51d500 100%);
+   background-blend-mode: screen, color-dodge, overlay, difference, normal; 
+  
+}
+.border-radius{
+  border-radius: 5px;
+}
+.text-header{
+  color:white;
+  font-size:1.6rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-red{
+  color:red;
+  text-decoration: none;
+}
+.text-red:hover{
+  color:rgb(4, 0, 0);
+  text-decoration: none;
+}
+
+.marg{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mb-0{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.top{
+  margin-top:2rem;
+  width: 30%;
+  display:flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap:2rem;
+}
+.align-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit_list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:0.5rem;
+}
+.align-x{
+  margin-right: -15rem;
+}
+.card{
+  margin-top: -5rem;
+}
