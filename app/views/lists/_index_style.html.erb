@@ -5,7 +5,7 @@
       <div class="col col-xl-10">
        <div class="d-flex justify-content-center align-items-center">
         <%= image_tag("text.png", width: 400, height: 400) %>
-     </div>
+      </div>
 
         <div class="card">
           <div class="card-body p-5 background border-radius" >
@@ -26,26 +26,22 @@
   <% end %>
 
   <div>
-  <label class="form-label text-header" for="form2">Welcome to your 2023 bucket list!</label>
+    <label class="form-label text-header" for="form2">Welcome to your 2023 bucket list!</label>
     <%= form.text_field :description, class: "form-control", placeholder: "Write your wish"  %>
   </div>
-  <br>
+    <br>
   <div class="align-btn">
-
-    <%= form.submit "Add wish", class: "btn btn-warning button-align align-btn" %>
-    
+    <%= form.submit "Add wish", class: "btn btn-warning button-align align-btn" %>  
   </div>
 <% end %>
+
 <% @lists.each do |list| %>
     <%= render list %>
     <%= form_for(list) do |f| %>
     <%= f.text_field :description, type: "hidden"  %>
     <%= f.check_box :completed, :checked =>true, :style => "visibility: hidden" %>
     <%= f.submit "Achieved!" , class: "btn btn-success" %>
-
-        
 <% end  %>
-    
   <% end %>
             <!-- Tabs content -->
   

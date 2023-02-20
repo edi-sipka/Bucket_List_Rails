@@ -8,13 +8,12 @@
                   
                  
   <p>
-  <% if list.completed %>
-    
-    <span class="strike">
+    <% if list.completed %>
+     <span class="strike">
     <%=  list.description %>
-     <%= button_to "X", list, method: :delete, class: "btn btn-danger align-x" %>
-     
+     <%= button_to "X", list, method: :delete, class: "btn btn-danger align-x" %> 
     </span>
+
     <% else %>
 
     <%=  list.description  %>
